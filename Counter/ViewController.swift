@@ -13,7 +13,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
+    @IBOutlet weak var counterLabel: UILabel!
+    
+    private var counter = 0
+    
+    @IBAction func didTapButton(_ sender: UIButton) {
+        counter += 1
+        counterLabel.text = "Значение счётчика: \(counter)"
+    }
 }
 
